@@ -2,7 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+/**
+ * @Author: Hassan Kobeissi
+ * @StudentNumber: 300847239
+ * @Date Created: June, 06,2016
+ * Version #: 0.0.1
+ */
 namespace Assignment3
 {
     public class TerrestrialPlanet : Planet

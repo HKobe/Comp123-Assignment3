@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+/**
+ * @Author: Hassan Kobeissi
+ * @StudentNumber: 300847239
+ * @Date Created: June, 06,2016
+ * Version #: 0.0.1
+ */
 namespace Assignment3
 {
     public abstract class Planet
     {
-        /*Private Instance Variables*/
+        #region Private Instance Variables
         private double _diameter;
         private double _mass;
         private int _moonCount;
@@ -15,20 +20,22 @@ namespace Assignment3
         private double _orbitalPeriod;
         private int _ringCount;
         private double _rotationPeriod;
-/*---------------------------------------*/
-
-  /// <summary>
+        #endregion
+        #region public Planet 
+        /// <summary>
         /// Planet Constructor Method
         /// </summary>
         /// <param name="name"></param>
         /// <param name="diameter"></param>
         /// <param name="mass"></param>
         public Planet(string name, double diameter, double mass)
-        {
+       {
             name = _name;
             diameter = _diameter;
             mass = _mass;
-        }
+       }
+        #endregion
+        #region Public Properties
 
         public double Diameter
         {
@@ -72,11 +79,12 @@ namespace Assignment3
         {
             get
             {
-                throw new System.NotImplementedException();
+                return _orbitalPeriod;
             }
 
             set
             {
+                _orbitalPeriod = value;
             }
         }
 
@@ -84,11 +92,12 @@ namespace Assignment3
         {
             get
             {
-                throw new System.NotImplementedException();
+                return _ringCount;
             }
 
             set
             {
+                _ringCount = value;
             }
         }
 
@@ -96,12 +105,21 @@ namespace Assignment3
         {
             get
             {
-                throw new System.NotImplementedException();
+                return _rotationPeriod;
             }
 
             set
             {
+                _rotationPeriod = value;
             }
         }
+        #endregion
+        #region ToString()
+        public override string ToString()
+        {
+            return String.Format("Name: {0}\nDiameter: {1}\nMass: {2}", this.Name, this.Diameter, this.Mass);
+
+        }
+        #endregion
     }
 }
