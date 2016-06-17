@@ -5,14 +5,17 @@ using System.Text;
 /**
  * @Author: Hassan Kobeissi
  * @StudentNumber: 300847239
- * @Date Created: June, 06,2016
- * Version #: 0.0.1
+ * @DateCreated: June, 06,2016
+ * @DateRelease: June, 17,2016
+ * @Description: The Parent Class, Abstract Class Planet. Root of Assignment3.
+ * Version #: 0.0.3
  */
 namespace Assignment3
 {
     public abstract class Planet
     {
         #region Private Instance Variables
+        /*PRIVATE INSTANCE VARIABLES*/
         private double _diameter;
         private double _mass;
         private int _moonCount;
@@ -21,6 +24,7 @@ namespace Assignment3
         private int _ringCount;
         private double _rotationPeriod;
         #endregion
+
         #region public Planet 
         /// <summary>
         /// Planet Constructor Method
@@ -30,13 +34,14 @@ namespace Assignment3
         /// <param name="mass"></param>
         public Planet(string name, double diameter, double mass)
        {
-            name = _name;
-            diameter = _diameter;
-            mass = _mass;
+            this._name = name;
+            this._diameter = diameter;
+            this._mass = mass;
        }
         #endregion
-        #region Public Properties
 
+        #region Public Properties
+        /*PUBLIC PROPERTIES*/
         public double Diameter
         {
             get
@@ -114,7 +119,12 @@ namespace Assignment3
             }
         }
         #endregion
+
         #region ToString()
+        /// <summary>
+        /// Override the inherited ToString() method so	that it outputs	Name, Diameter and Mass to the Console.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return String.Format("Name: {0}\nDiameter: {1}\nMass: {2}", this.Name, this.Diameter, this.Mass);

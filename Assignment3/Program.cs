@@ -6,19 +6,52 @@ using System.Threading.Tasks;
 /**
  * @Author: Hassan Kobeissi
  * @StudentNumber: 300847239
- * @Date Created: June, 06,2016
- * Version #: 0.0.1
+ * @DateCreated: June, 06,2016
+ * @DateReleased: June, 17,2016
+ * @Description: This program tests the GiantPlanet and TerrestrialPlanet classes.
+ * Version #: 0.0.3
  */
 namespace Assignment3
 {
-    class Program
+    public class Program
     {
         /// <summary>
         /// Main Method
         /// </summary>
         /// <param name="args"></param>
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            #region GiantPlanet
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Planet Saturn = new GiantPlanet("Saturn", 95.5, 92.5, "Gas");
+            Console.WriteLine("************************************************");
+            Console.WriteLine(Saturn.ToString());
+            Console.WriteLine("************************************************");
+            #endregion
+
+            Console.WriteLine();
+            Console.BackgroundColor = ConsoleColor.Red;
+
+            #region TerrestrialPlanet
+            TerrestrialPlanet Nebula = new TerrestrialPlanet("Nebula", 70.2, 80.3, true);
+            Console.WriteLine("************************************************");
+            Console.WriteLine(Nebula.ToString());
+            Console.WriteLine("************************************************");
+            #endregion
+
+            Console.WriteLine();
+            waitForAnyKey();
+        }
+        /// <summary>
+        /// Utility method to wait for a console key press from the user.
+        /// </summary>
+        /// @Returns Void
+        /// @Method WaitForAnyKey()
+        public static void waitForAnyKey()
+        {
+
+            Console.WriteLine("Press Any Key to exit: ");
+            Console.ReadKey();
         }
     }
 }
