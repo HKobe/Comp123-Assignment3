@@ -127,7 +127,7 @@ namespace Assignment3
         /// <returns></returns>
         public override string ToString()
         {
-            return String.Format("Name: {0}\nDiameter: {1}\nMass: {2}", this.Name, this.Diameter, this.Mass);
+            return String.Format("Name of Planet: {0}\nDiameter of {1}: {2}\nMass of {3}: {4}", this.Name, this.Name, this.Diameter, this.Name,this.Mass);
 
         }
         #endregion

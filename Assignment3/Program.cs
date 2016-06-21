@@ -21,8 +21,10 @@ namespace Assignment3
         /// <param name="args"></param>
         public static void Main(string[] args)
         {
+
             #region GiantPlanet
             Console.BackgroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.White;
             Planet Saturn = new GiantPlanet("Saturn", 95.5, 92.5, "Gas");
             Console.WriteLine("************************************************");
             Console.WriteLine(Saturn.ToString());
@@ -33,14 +35,18 @@ namespace Assignment3
             Console.BackgroundColor = ConsoleColor.Red;
 
             #region TerrestrialPlanet
+            
             TerrestrialPlanet Nebula = new TerrestrialPlanet("Nebula", 70.2, 80.3, true);
             Console.WriteLine("************************************************");
             Console.WriteLine(Nebula.ToString());
             Console.WriteLine("************************************************");
+            
             #endregion
 
             Console.WriteLine();
+            
             waitForAnyKey();
+   
         }
         /// <summary>
         /// Utility method to wait for a console key press from the user.
@@ -49,7 +55,18 @@ namespace Assignment3
         /// @Method WaitForAnyKey()
         public static void waitForAnyKey()
         {
-
+            /*Console.WriteLine("enter 'x' to exit: ");
+            Console.WriteLine("Hassan Kobeissi - 300847239");
+            Console.WriteLine("S - To choose Saturn");
+            Console.WriteLine("G - To choose Giant Planet");
+            string choice = Console.ReadLine();
+           /* switch (choice)
+            {
+               
+                case "x":
+                    break;
+              
+            }*/
             Console.WriteLine("Press Any Key to exit: ");
             Console.ReadKey();
         }

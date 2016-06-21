@@ -80,7 +80,7 @@ namespace Assignment3
         /// <returns></returns>
         public override string ToString()
         {
-            return base.ToString()  + String.Format("\nType: {0}",Type);
+            return base.ToString()  + String.Format("\n{0} is of Type: {1}",this.Name,Type);
         }
         #endregion
     }

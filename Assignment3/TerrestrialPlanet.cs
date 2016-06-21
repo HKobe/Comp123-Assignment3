@@ -73,7 +73,6 @@ namespace Assignment3
         }
         #endregion
 
-
         #region ToString()
         /// <summary>
         /// ToString() Override the inherited ToString() method so that it outputs Oxygen.
@@ -81,7 +80,7 @@ namespace Assignment3
         /// <returns></returns>
         public override string ToString()
         {
-            return base.ToString() + String.Format("\nHas Oxygen? {0}", Oxygen);
+            return base.ToString() + String.Format("\n{0} Has Oxygen? {1}",this.Name, Oxygen);
         }
         #endregion
     }
